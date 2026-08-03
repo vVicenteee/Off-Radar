@@ -1,0 +1,33 @@
+OFF RADAR — Sitio para publicar en GitHub Pages
+================================================
+
+Todo lo de esta carpeta ES el sitio. La página de entrada es index.html.
+
+PASOS (todo desde el navegador, sin programas)
+----------------------------------------------
+1. Crea cuenta gratis en github.com.
+2. Botón "+" (arriba a la derecha) → New repository.
+   - Name: off-radar
+   - Public
+   - Create repository.
+3. En el repo vacío: "Add file" → "Upload files".
+   - Descomprime este zip.
+   - ABRE la carpeta, selecciona TODO lo de adentro (Ctrl/Cmd + A):
+     index.html, 404.html, los "Off Radar - *.dc.html", los *.state.json,
+     support.js, image-slot.js, .nojekyll y la carpeta assets.
+   - Arrástralo a la ventana de GitHub. (index.html debe quedar en la raíz,
+     NO dentro de una subcarpeta.)
+   - Abajo: "Commit changes".
+4. Settings → Pages → Source: "Deploy from a branch" →
+   Branch: main → carpeta / (root) → Save.
+5. Espera ~1 min y recarga: aparece tu URL permanente, tipo
+   https://tuusuario.github.io/off-radar/  → ábrela y listo.
+
+No caduca, es gratis y sirve por http (las imágenes cargan solas).
+
+Para actualizar en el futuro: repite el paso 3 (Upload files) con los
+archivos nuevos; GitHub republica solo.
+
+Incluye: Inicio, Ediciones, Boxeo, Explorar, Historias, Nosotros,
+Calendario, Suscripción, Contacto y Envío de información.
+(Los mockups de redes sociales quedaron fuera, según lo pedido.)

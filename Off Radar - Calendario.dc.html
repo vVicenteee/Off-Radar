@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calendario — Off Radar</title>
+<meta name="description" content="Off Radar — deportes underground, historias reales, sin filtro. Revista digital de talento local.">
+<link rel="icon" type="image/png" href="assets/logo-stacked-white.png">
+<meta property="og:title" content="Calendario — Off Radar">
+<meta property="og:description" content="Off Radar — deportes underground, historias reales, sin filtro. Revista digital de talento local.">
+<meta property="og:type" content="website">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail" data-bg-color="#1D1E1C">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#1D1E1C"/>
+    <rect x="420" y="240" width="360" height="280" rx="14" fill="#26251F" stroke="#B9CE0B" stroke-width="5"/><rect x="420" y="240" width="360" height="60" rx="14" fill="#B9CE0B"/><rect x="460" y="340" width="50" height="40" rx="6" fill="#3a3a35"/><rect x="530" y="340" width="50" height="40" rx="6" fill="#F1841B"/><rect x="600" y="340" width="50" height="40" rx="6" fill="#3a3a35"/><text x="600" y="600" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="48" font-weight="800" fill="#fff" text-anchor="middle">CALENDARIO</text>
+  </svg>
+</template>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&display=swap" rel="stylesheet">
+<style>
+  html{background:#1D1E1C}
+  body{margin:0;background:#1D1E1C;font-family:'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:#E7569A;text-decoration:none}
+  a:hover{color:#ef82b7}
+  ::selection{background:#E7569A;color:#1D1E1C}
+  .pg a{color:inherit}
+  .eyebrow{font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+  .card-title{margin:0;font-weight:800;text-transform:uppercase;color:#fff}
+  .meta{font-weight:500;font-size:12px;color:rgba(255,255,255,.45)}
+  .badge{display:inline-block;font-weight:800;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+</style>
+<script>
+(function(){
+  if (window.top !== window.self) return; /* no escalar dentro del editor */
+  var DESIGN = 1440;
+  function pg(){ return document.querySelector('.pg'); }
+  function fit(){
+    var el = pg(); if(!el) return;
+    el.style.width = DESIGN + 'px';
+    el.style.transformOrigin = 'top left';
+    var vw = document.documentElement.clientWidth;
+    el.style.transform = 'scale(' + (vw / DESIGN) + ')';
+    document.body.style.height = el.getBoundingClientRect().height + 'px';
+  }
+  document.documentElement.style.overflowX = 'hidden';
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', fit);
+  var iv = setInterval(function(){ if(pg()){ fit(); } }, 250);
+  setTimeout(function(){ clearInterval(iv); }, 5000);
+  if (window.ResizeObserver){
+    var t = setInterval(function(){ var el = pg(); if(el){ new ResizeObserver(fit).observe(el); clearInterval(t); } }, 150);
+  }
+  document.addEventListener('DOMContentLoaded', fit);
+  fit();
+})();
+</script>
+</helmet>
+
+<div class="pg" style="display:flex;flex-direction:column;background:#1D1E1C;width:100%">
+  <dc-import name="OR-Nav" active="explorar" hint-size="100%,72px"></dc-import>
+  <section data-screen-label="Calendario" style="padding:44px 50px 56px">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:26px">
+      <div>
+        <span class="eyebrow" style="color:#E7569A">Explorar</span>
+        <h1 style="margin:10px 0 0;font-weight:800;font-size:52px;line-height:.95;text-transform:uppercase;color:#fff">Calendario deportivo</h1>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px"><span onClick="{{ prevMonth }}" style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer">‹</span><span style="font-weight:800;font-size:20px;text-transform:uppercase;color:#fff;min-width:190px;text-align:center">{{ monthLabel }}</span><span onClick="{{ nextMonth }}" style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer">›</span></div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px">
+      <sc-for list="{{ calChips }}" as="c" hint-placeholder-count="5"><span onClick="{{ c.pick }}" style="{{ c.style }}">{{ c.label }}</span></sc-for>
+    </div>
+    <div style="font-weight:600;font-size:13px;color:rgba(255,255,255,.4);margin-bottom:20px">{{ calResultLabel }}</div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ filteredEvents }}" as="ev" hint-placeholder-count="4">
+        <a href="Off%20Radar%20-%20Secciones.dc.html" style="{{ ev.rowStyle }}">
+          <div style="text-align:center;width:64px;flex:none"><div style="font-weight:800;font-size:26px;color:#fff;line-height:1">{{ ev.day }}</div><div class="meta" style="text-transform:uppercase;letter-spacing:.08em">{{ ev.month }}</div></div>
+          <div style="flex:1">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:5px;flex-wrap:wrap"><h3 class="card-title" style="font-size:19px">{{ ev.title }}</h3><span style="{{ ev.badgeStyle }}">{{ ev.disc }}</span></div>
+            <div class="meta">◍ {{ ev.place }} · {{ ev.time }}</div>
+          </div>
+          <span class="badge" style="color:#B9CE0B;border:1px solid rgba(185,206,11,.5)">Próximo</span>
+        </a>
+      </sc-for>
+    </div>
+    <sc-if value="{{ noEvents }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:40px;text-align:center;color:rgba(255,255,255,.4);font-weight:500;font-size:15px;border:1px dashed rgba(255,255,255,.14);border-radius:14px;margin-top:4px">No hay eventos próximos para esta disciplina.</div>
+    </sc-if>
+  </section>
+  <dc-import name="OR-Footer" hint-size="100%,340px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { calFilter: 'Todos' };
+  DISC = [
+    { key: 'Boxeo', color: '#F1841B', on: '#1D1E1C' },
+    { key: 'Cheerleading', color: '#E7569A', on: '#1D1E1C' },
+    { key: 'Triatlón', color: '#B9CE0B', on: '#1D1E1C' },
+    { key: 'Fútbol femenino', color: '#584F9C', on: '#fff' },
+  ];
+  EVENTS = [
+    { day: '14', month: 'AGO', title: 'Velada de boxeo amateur — Barrio Histórico', place: 'Club Estrella, La Chimba', time: '20:00', disc: 'Boxeo' },
+    { day: '23', month: 'AGO', title: 'Copa Regional femenina — Cuartos', place: 'Complejo Deportivo Municipal', time: '12:00', disc: 'Fútbol femenino' },
+    { day: '30', month: 'AGO', title: 'Triatlón Sprint Laguna — 4ta fecha', place: 'Playa Trocadero', time: '08:00', disc: 'Triatlón' },
+    { day: '06', month: 'SEP', title: 'Regional de Cheerleading — Clasificatoria', place: 'Estadio Sokol', time: '17:00', disc: 'Cheerleading' },
+    { day: '13', month: 'SEP', title: 'Velada de boxeo — Barrio Estación', place: 'Gimnasio Municipal Corvallis', time: '21:00', disc: 'Boxeo' },
+  ];
+  renderVals() {
+    const s = this.state;
+    const discBadge = (key) => {
+      const d = this.DISC.find(x => x.key === key) || this.DISC[0];
+      return `color:${d.on};background:${d.color};display:inline-block;font-weight:800;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:999px`;
+    };
+    const chipBase = 'font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;padding:8px 14px;border-radius:999px;cursor:pointer;border:1px solid ';
+    const calChips = [{ key: 'Todos', color: '#E7569A' }, ...this.DISC.map(d => ({ key: d.key, color: d.color }))].map(c => {
+      const active = s.calFilter === c.key;
+      const style = active
+        ? chipBase + c.color + ';background:' + c.color + ';color:#1D1E1C'
+        : chipBase + 'rgba(255,255,255,.16);background:transparent;color:' + (c.key === 'Todos' ? '#eee' : c.color);
+      return { label: c.key, style, pick: () => this.setState({ calFilter: c.key }) };
+    });
+    const filtered = s.calFilter === 'Todos' ? this.EVENTS : this.EVENTS.filter(e => e.disc === s.calFilter);
+    const filteredEvents = filtered.map(e => {
+      const d = this.DISC.find(x => x.key === e.disc) || this.DISC[0];
+      return { ...e, badgeStyle: discBadge(e.disc),
+        rowStyle: `display:flex;gap:22px;align-items:center;text-decoration:none;background:#26251F;border:1px solid rgba(255,255,255,.08);border-left:4px solid ${d.color};border-radius:12px;padding:20px 24px` };
+    });
+    return {
+      calChips, filteredEvents,
+      monthLabel: 'Agosto 2026',
+      prevMonth: () => {}, nextMonth: () => {},
+      noEvents: filteredEvents.length === 0,
+      calResultLabel: filteredEvents.length + (filteredEvents.length === 1 ? ' evento próximo' : ' eventos próximos') + (s.calFilter === 'Todos' ? '' : ' · ' + s.calFilter),
+    };
+  }
+}
+</script>
+</body>
+</html>

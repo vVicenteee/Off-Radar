@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Historias — Off Radar</title>
+<meta name="description" content="Off Radar — deportes underground, historias reales, sin filtro. Revista digital de talento local.">
+<link rel="icon" type="image/png" href="assets/logo-stacked-white.png">
+<meta property="og:title" content="Historias — Off Radar">
+<meta property="og:description" content="Off Radar — deportes underground, historias reales, sin filtro. Revista digital de talento local.">
+<meta property="og:type" content="website">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail" data-bg-color="#1D1E1C">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#1D1E1C"></rect>
+    <rect x="360" y="250" width="480" height="70" rx="8" fill="#584F9C"></rect><rect x="360" y="350" width="360" height="40" rx="6" fill="#3a3a35"></rect><rect x="360" y="410" width="420" height="40" rx="6" fill="#3a3a35"></rect><text x="600" y="600" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="64" font-weight="800" fill="#fff" text-anchor="middle">HISTORIAS</text>
+  </svg>
+</template>
+<helmet data-dc-atomics="">
+<meta name="design_doc_mode" content="canvas">
+<script src="./image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&amp;display=swap" rel="stylesheet">
+<style>
+  html{background:#1D1E1C}
+  body{margin:0;background:#1D1E1C;font-family:'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:#E7569A;text-decoration:none}
+  a:hover{color:#ef82b7}
+  ::selection{background:#E7569A;color:#1D1E1C}
+  .pg a{color:inherit}
+  .card-title{margin:0;font-weight:800;text-transform:uppercase;color:#fff}
+  .eyebrow{font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+  .meta{font-weight:500;font-size:12px;color:rgba(255,255,255,.45)}
+  .chip{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.16);color:#eee}
+  .chip-on{background:#E7569A;color:#1D1E1C;border-color:#E7569A}
+  .badge{display:inline-block;font-weight:800;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:24px}
+  .sec-link{font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+</style>
+<script>
+(function(){
+  if (window.top !== window.self) return; /* no escalar dentro del editor */
+  var DESIGN = 1440;
+  function pg(){ return document.querySelector('.pg'); }
+  function fit(){
+    var el = pg(); if(!el) return;
+    el.style.width = DESIGN + 'px';
+    el.style.transformOrigin = 'top left';
+    var vw = document.documentElement.clientWidth;
+    el.style.transform = 'scale(' + (vw / DESIGN) + ')';
+    document.body.style.height = el.getBoundingClientRect().height + 'px';
+  }
+  document.documentElement.style.overflowX = 'hidden';
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', fit);
+  var iv = setInterval(function(){ if(pg()){ fit(); } }, 250);
+  setTimeout(function(){ clearInterval(iv); }, 5000);
+  if (window.ResizeObserver){
+    var t = setInterval(function(){ var el = pg(); if(el){ new ResizeObserver(fit).observe(el); clearInterval(t); } }, 150);
+  }
+  document.addEventListener('DOMContentLoaded', fit);
+  fit();
+})();
+</script>
+</helmet>
+
+<div class="pg" style="display:flex;flex-direction:column;background:#1D1E1C;width:100%">
+  <dc-import name="OR-Nav" active="historias" hint-size="100%,72px"></dc-import>
+
+  <!-- HERO -->
+  <section data-screen-label="Historias" style="padding:56px 50px 8px">
+    <div style="max-width:820px">
+      <span class="eyebrow" style="color:#E7569A">Historias</span>
+      <h1 style="margin:12px 0 16px;font-weight:800;font-size:66px;line-height:.92;text-transform:uppercase;color:#fff">Historias</h1>
+      <p style="margin:0;font-weight:400;font-size:18px;line-height:1.55;color:rgba(255,255,255,.6)">Periodismo deportivo de largo aliento desde Antofagasta. Reportajes, entrevistas, galerías y documentales sobre el deporte que no sale en la tele.</p>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:26px">
+      <a href="#reportajes" style="padding:11px 20px;border-radius:999px;background:#E7569A;color:#1D1E1C;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.05em">Reportajes</a>
+      <a href="#entrevistas" class="chip">Entrevistas</a>
+      <a href="#galerias" class="chip">Galerías</a>
+      <a href="#audiovisual" class="chip">Audiovisual</a>
+    </div>
+  </section>
+
+  <!-- REPORTAJES -->
+  <section id="reportajes" style="padding:44px 50px 8px">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow" style="color:#F1841B">01 · Largo aliento</span>
+        <h2 class="card-title" style="font-size:34px;margin-top:8px">Reportajes</h2>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px">
+      <span class="chip chip-on">Todos</span>
+      <span class="chip" style="border-color:rgba(241,132,27,.45);color:#F1841B">Boxeo</span>
+      <span class="chip" style="border-color:rgba(231,86,154,.45);color:#E7569A">Cheerleading</span>
+      <span class="chip" style="border-color:rgba(185,206,11,.45);color:#B9CE0B">Triatlón</span>
+      <span class="chip" style="border-color:rgba(88,79,156,.55);color:#8f86cf">Fútbol femenino</span>
+    </div>
+    <a href="#" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:0;background:#26251F;border:1.5px solid #F1841B;border-radius:18px;overflow:hidden;margin-bottom:26px;min-height:340px">
+      <div style="position:relative"><image-slot id="his-r-feat" shape="rect" placeholder="Reportaje destacado"></image-slot></div>
+      <div style="padding:40px 40px;display:flex;flex-direction:column;justify-content:center">
+        <span class="badge" style="color:#1D1E1C;background:#F1841B;align-self:flex-start">Boxeo · Reportaje</span>
+        <h2 class="card-title" style="font-size:38px;line-height:1.02;margin:16px 0 12px">Los gimnasios que sobreviven en las sombras de la ciudad</h2>
+        <p style="margin:0 0 18px;font-weight:400;font-size:16px;line-height:1.55;color:rgba(255,255,255,.62)">Un recorrido por los rings de La Chimba donde se forjan los próximos campeones regionales, entre goteras, sacos remendados y una fe inquebrantable.</p>
+        <div class="meta">Por Martín Herrera · 8 min de lectura</div>
+      </div>
+    </a>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+      <a href="#" style="border:1.5px solid #584F9C;border-radius:16px;overflow:hidden;background:#26251F;opacity:.5"><div style="aspect-ratio:16/10;position:relative"><image-slot id="his-r1" shape="rect" placeholder="Foto"></image-slot></div><div style="padding:18px 20px 22px"><span class="badge" style="color:#fff;background:#584F9C">Fútbol fem.</span><h3 class="card-title" style="font-size:20px;margin:12px 0 8px;line-height:1.12">La liga que se juega sin cámaras ni sueldos</h3><span class="badge" style="color:#584F9C;border:1px solid rgba(88,79,156,.5)">Próximamente</span></div></a>
+      <a href="#" style="border:1.5px solid #B9CE0B;border-radius:16px;overflow:hidden;background:#26251F;opacity:.5"><div style="aspect-ratio:16/10;position:relative"><image-slot id="his-r2" shape="rect" placeholder="Foto"></image-slot></div><div style="padding:18px 20px 22px"><span class="badge" style="color:#1D1E1C;background:#B9CE0B">Triatlón</span><h3 class="card-title" style="font-size:20px;margin:12px 0 8px;line-height:1.12">226 kilómetros contra uno mismo</h3><span class="badge" style="color:#B9CE0B;border:1px solid rgba(185,206,11,.5)">Próximamente</span></div></a>
+      <a href="#" style="border:1.5px solid #E7569A;border-radius:16px;overflow:hidden;background:#26251F;opacity:.5"><div style="aspect-ratio:16/10;position:relative"><image-slot id="his-r3" shape="rect" placeholder="Foto"></image-slot></div><div style="padding:18px 20px 22px"><span class="badge" style="color:#1D1E1C;background:#E7569A">Cheerleading</span><h3 class="card-title" style="font-size:20px;margin:12px 0 8px;line-height:1.12">Volar sin red: el deporte que nadie llama deporte</h3><span class="badge" style="color:#E7569A;border:1px solid rgba(231,86,154,.5)">Próximamente</span></div></a>
+    </div>
+  </section>
+
+  <!-- ENTREVISTAS -->
+  <section id="entrevistas" style="padding:44px 50px 8px">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow" style="color:#F1841B">02 · Cara a cara</span>
+        <h2 class="card-title" style="font-size:34px;margin-top:8px">Entrevistas</h2>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+      <a href="#" style="border:1.5px solid #F1841B;border-radius:16px;overflow:hidden;background:#26251F"><div style="aspect-ratio:4/5;position:relative"><image-slot id="his-e1" shape="rect" placeholder="Retrato"></image-slot><span class="badge" style="color:#1D1E1C;background:#F1841B;position:absolute;top:14px;left:14px">Boxeo</span></div><div style="padding:20px 22px 24px"><h3 class="card-title" style="font-size:22px;line-height:1.08">"Peleo porque no sé hacer otra cosa"</h3><div class="meta" style="margin-top:10px">Gerardo Martinez · boxeador</div></div></a>
+      <a href="#" style="border:1.5px solid #584F9C;border-radius:16px;overflow:hidden;background:#26251F"><div style="aspect-ratio:4/5;position:relative"><image-slot id="his-e2" shape="rect" placeholder="Retrato"></image-slot><span class="badge" style="color:#fff;background:#584F9C;position:absolute;top:14px;left:14px">Fútbol fem.</span></div><div style="padding:20px 22px 24px"><h3 class="card-title" style="font-size:22px;line-height:1.08">"Jugamos aunque nadie mire"</h3><div class="meta" style="margin-top:10px">Trinidad Rojas · capitana Las Leonas</div></div></a>
+      <a href="#" style="border:1.5px solid #B9CE0B;border-radius:16px;overflow:hidden;background:#26251F"><div style="aspect-ratio:4/5;position:relative"><image-slot id="his-e3" shape="rect" placeholder="Retrato"></image-slot><span class="badge" style="color:#1D1E1C;background:#B9CE0B;position:absolute;top:14px;left:14px">Triatlón</span></div><div style="padding:20px 22px 24px"><h3 class="card-title" style="font-size:22px;line-height:1.08">"El dolor es parte del entrenamiento"</h3><div class="meta" style="margin-top:10px">Ignacia Ruiz · triatleta</div></div></a>
+    </div>
+  </section>
+
+  <!-- GALERÍAS -->
+  <section id="galerias" style="padding:44px 50px 8px">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow" style="color:#F1841B">03 · En imágenes</span>
+        <h2 class="card-title" style="font-size:34px;margin-top:8px">Galerías</h2>
+      </div>
+      <a href="Off%20Radar%20-%20Secciones.dc.html" class="sec-link">Ver galerías →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+      <a href="#" style="border:1.5px solid #F1841B;border-radius:16px;overflow:hidden;background:#26251F"><div style="aspect-ratio:3/2;position:relative"><image-slot id="his-g1" shape="rect" placeholder="Portada galería"></image-slot><span class="badge" style="color:#1D1E1C;background:#F1841B;position:absolute;top:14px;left:14px">Boxeo</span><span style="position:absolute;bottom:14px;right:14px;background:rgba(29,30,28,.8);color:#fff;font-weight:700;font-size:11px;padding:5px 10px;border-radius:999px">18 fotos</span></div><div style="padding:18px 20px 22px"><h3 class="card-title" style="font-size:20px;line-height:1.1">Una noche en el Club Estrella</h3></div></a>
+      <a href="#" style="border:1.5px solid #B9CE0B;border-radius:16px;overflow:hidden;background:#26251F;opacity:.5"><div style="aspect-ratio:3/2;position:relative"><image-slot id="his-g2" shape="rect" placeholder="Portada galería"></image-slot><span class="badge" style="color:#1D1E1C;background:#B9CE0B;position:absolute;top:14px;left:14px">Triatlón</span><span style="position:absolute;bottom:14px;right:14px;background:rgba(29,30,28,.8);color:#fff;font-weight:700;font-size:11px;padding:5px 10px;border-radius:999px">24 fotos</span></div><div style="padding:18px 20px 22px"><h3 class="card-title" style="font-size:20px;line-height:1.1">Amanecer sobre el asfalto: 226K</h3><span class="badge" style="color:#B9CE0B;border:1px solid rgba(185,206,11,.5);margin-top:12px;display:inline-block">Próximamente</span></div></a>
+      <a href="#" style="border:1.5px solid #584F9C;border-radius:16px;overflow:hidden;background:#26251F;opacity:.5"><div style="aspect-ratio:3/2;position:relative"><image-slot id="his-g3" shape="rect" placeholder="Portada galería"></image-slot><span class="badge" style="color:#fff;background:#584F9C;position:absolute;top:14px;left:14px">Fútbol fem.</span><span style="position:absolute;bottom:14px;right:14px;background:rgba(29,30,28,.8);color:#fff;font-weight:700;font-size:11px;padding:5px 10px;border-radius:999px">31 fotos</span></div><div style="padding:18px 20px 22px"><h3 class="card-title" style="font-size:20px;line-height:1.1">El clásico del sector norte</h3><span class="badge" style="color:#584F9C;border:1px solid rgba(88,79,156,.5);margin-top:12px;display:inline-block">Próximamente</span></div></a>
+    </div>
+  </section>
+
+  <!-- AUDIOVISUAL -->
+  <section id="audiovisual" style="padding:44px 50px 60px">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow" style="color:#F1841B">04 · En movimiento</span>
+        <h2 class="card-title" style="font-size:34px;margin-top:8px">Audiovisual</h2>
+      </div>
+    </div>
+    <a href="#" style="position:relative;display:block;border-radius:18px;overflow:hidden;min-height:420px;margin-bottom:26px;border:1px solid rgba(255,255,255,.08)">
+      <div style="position:absolute;inset:0"><image-slot id="his-av-feat" shape="rect" placeholder="Documental destacado"></image-slot></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(29,30,28,.92) 6%, rgba(29,30,28,.15) 60%);pointer-events:none"></div>
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:78px;height:78px;border-radius:50%;background:#E7569A;display:flex;align-items:center;justify-content:center;color:#1D1E1C;font-size:26px">▶</div>
+      <div style="position:absolute;left:40px;bottom:36px;right:40px"><span class="badge" style="color:#1D1E1C;background:#F1841B">Documental · Boxeo</span><h2 class="card-title" style="font-size:34px;margin:14px 0 8px;line-height:1.05">Ring de barrio</h2><div class="meta">28 min · Off Radar Studios</div></div>
+    </a>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+      <a href="#" style="border:1.5px solid #584F9C;border-radius:16px;overflow:hidden;background:#26251F;opacity:.5"><div style="aspect-ratio:16/9;position:relative"><image-slot id="his-av1" shape="rect" placeholder="Miniatura"></image-slot><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none"><span style="width:48px;height:48px;border-radius:50%;background:rgba(231,86,154,.92);display:flex;align-items:center;justify-content:center;color:#1D1E1C">▶</span></span><span style="position:absolute;bottom:12px;right:12px;background:rgba(29,30,28,.85);color:#fff;font-weight:700;font-size:11px;padding:4px 8px;border-radius:6px">6:20</span></div><div style="padding:16px 18px 20px"><span class="badge" style="color:#fff;background:#584F9C">Fútbol fem.</span><h3 class="card-title" style="font-size:18px;margin-top:10px;line-height:1.15">Cápsula: un día con Las Leonas</h3><span class="badge" style="color:#584F9C;border:1px solid rgba(88,79,156,.5);margin-top:12px;display:inline-block">Próximamente</span></div></a>
+      <a href="#" style="border:1.5px solid #B9CE0B;border-radius:16px;overflow:hidden;background:#26251F;opacity:.5"><div style="aspect-ratio:16/9;position:relative"><image-slot id="his-av2" shape="rect" placeholder="Miniatura"></image-slot><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none"><span style="width:48px;height:48px;border-radius:50%;background:rgba(231,86,154,.92);display:flex;align-items:center;justify-content:center;color:#1D1E1C">▶</span></span><span style="position:absolute;bottom:12px;right:12px;background:rgba(29,30,28,.85);color:#fff;font-weight:700;font-size:11px;padding:4px 8px;border-radius:6px">4:05</span></div><div style="padding:16px 18px 20px"><span class="badge" style="color:#1D1E1C;background:#B9CE0B">Triatlón</span><h3 class="card-title" style="font-size:18px;margin-top:10px;line-height:1.15">La previa de la fecha 4</h3><span class="badge" style="color:#B9CE0B;border:1px solid rgba(185,206,11,.5);margin-top:12px;display:inline-block">Próximamente</span></div></a>
+      <a href="#" style="border:1.5px solid #E7569A;border-radius:16px;overflow:hidden;background:#26251F;opacity:.5"><div style="aspect-ratio:16/9;position:relative"><image-slot id="his-av3" shape="rect" placeholder="Miniatura"></image-slot><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none"><span style="width:48px;height:48px;border-radius:50%;background:rgba(231,86,154,.92);display:flex;align-items:center;justify-content:center;color:#1D1E1C">▶</span></span><span style="position:absolute;bottom:12px;right:12px;background:rgba(29,30,28,.85);color:#fff;font-weight:700;font-size:11px;padding:4px 8px;border-radius:6px">3:48</span></div><div style="padding:16px 18px 20px"><span class="badge" style="color:#1D1E1C;background:#E7569A">Cheerleading</span><h3 class="card-title" style="font-size:18px;margin-top:10px;line-height:1.15">Detrás de la rutina campeona</h3><span class="badge" style="color:#E7569A;border:1px solid rgba(231,86,154,.5);margin-top:12px;display:inline-block">Próximamente</span></div></a>
+    </div>
+  </section>
+
+  <dc-import name="OR-Footer" hint-size="100%,340px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

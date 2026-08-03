@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Off Radar — Revista digital de deporte underground</title>
+<meta name="description" content="Off Radar — deportes underground, historias reales, sin filtro. Revista digital de talento local.">
+<link rel="icon" type="image/png" href="assets/logo-stacked-white.png">
+<meta property="og:title" content="Off Radar — Revista digital de deporte underground">
+<meta property="og:description" content="Off Radar — deportes underground, historias reales, sin filtro. Revista digital de talento local.">
+<meta property="og:type" content="website">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail" data-bg-color="#1D1E1C">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#1D1E1C"/>
+    <ellipse cx="600" cy="360" rx="150" ry="88" fill="#fff"/>
+    <circle cx="600" cy="360" r="46" fill="#1D1E1C"/>
+    <path d="M600 330 l14 30 l-14 30 l-14 -30 z" fill="#fff"/>
+    <path d="M470 300 h-24 v24 M730 300 h24 v24 M470 420 h-24 v-24 M730 420 h24 v-24" stroke="#E7569A" stroke-width="9" fill="none"/>
+    <text x="600" y="560" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="86" font-weight="800" fill="#fff" text-anchor="middle">OFF <tspan fill="#E7569A" font-style="italic">RADAR</tspan></text>
+  </svg>
+</template>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<script src="./image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#1D1E1C;font-family:'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:#E7569A;text-decoration:none}
+  a:hover{color:#ef82b7}
+  ::selection{background:#E7569A;color:#1D1E1C}
+  .disc a, nav a{color:inherit}
+  summary::-webkit-details-marker{display:none}
+  .m-open{display:flex;flex-direction:column;gap:4px}
+  .m-close{display:none}
+  details[open] .m-open{display:none}
+  details[open] .m-close{display:flex}
+</style>
+<script>
+(function(){
+  if (window.top !== window.self) return; /* no escalar dentro del editor */
+  var DESIGN = 1440;
+  function pg(){ return document.querySelector('.pg'); }
+  function fit(){
+    var el = pg(); if(!el) return;
+    el.style.width = DESIGN + 'px';
+    el.style.transformOrigin = 'top left';
+    var vw = document.documentElement.clientWidth;
+    el.style.transform = 'scale(' + (vw / DESIGN) + ')';
+    document.body.style.height = el.getBoundingClientRect().height + 'px';
+  }
+  document.documentElement.style.overflowX = 'hidden';
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', fit);
+  var iv = setInterval(function(){ if(pg()){ fit(); } }, 250);
+  setTimeout(function(){ clearInterval(iv); }, 5000);
+  if (window.ResizeObserver){
+    var t = setInterval(function(){ var el = pg(); if(el){ new ResizeObserver(fit).observe(el); clearInterval(t); } }, 150);
+  }
+  document.addEventListener('DOMContentLoaded', fit);
+  fit();
+})();
+</script>
+</helmet>
+
+<div class="pg" style="display:flex;flex-direction:column;gap:0;background:#1D1E1C;width:100%">
+
+<section data-screen-label="Home" style="padding:0">
+  <div style="width:100%;background:#1D1E1C">
+
+
+    <!-- NAVBAR -->
+    <header style="display:flex;align-items:center;justify-content:space-between;padding:20px 40px;border-bottom:1px solid rgba(255,255,255,.07);position:relative;z-index:2">
+      <img src="assets/logo-horizontal-white.png" alt="Off Radar" style="height:24px;width:auto;display:block">
+      <nav style="display:flex;gap:4px;align-items:center;flex:1;justify-content:center">
+        <a href="Off%20Radar%20-%20Home.dc.html" style="padding:8px 13px;border-radius:8px;background:rgba(231,86,154,.12);font:700 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em">Inicio</a>
+        <a href="Off%20Radar%20-%20Ediciones.dc.html" style="padding:8px 13px;font:700 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:#eee">Ediciones</a>
+        <a href="Off%20Radar%20-%20Secciones.dc.html" style="padding:8px 13px;font:700 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:#eee">Explorar</a>
+        <a href="Off%20Radar%20-%20Historias.dc.html" style="padding:8px 13px;font:700 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:#eee">Historias</a>
+        <a href="Off%20Radar%20-%20Nosotros.dc.html" style="padding:8px 13px;font:700 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:#eee">Nosotros</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:16px">
+        <a href="Off%20Radar%20-%20Suscripcion.dc.html" style="padding:9px 17px;border-radius:999px;background:#E7569A;color:#1D1E1C;font:800 12px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em">Suscríbete</a>
+        <span style="font:600 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.45)">@offradar.cl</span>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <div style="position:relative;min-height:520px;overflow:hidden">
+      <div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 78% 40%, rgba(88,79,156,.45), transparent 55%), radial-gradient(90% 80% at 95% 60%, rgba(231,86,154,.35), transparent 60%)"></div>
+      <div style="position:absolute;inset:0"><image-slot id="or-hero" shape="rect" fit="cover" placeholder="Foto héroe — deportista"></image-slot></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg,#1D1E1C 24%, rgba(29,30,28,.6) 46%, transparent 72%);pointer-events:none"></div>
+      <div style="position:relative;z-index:2;min-height:520px;box-sizing:border-box;padding:70px 50px;display:flex;flex-direction:column;justify-content:center;max-width:660px">
+        <span style="font:700 12px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#E7569A;margin-bottom:22px">Revista digital · deporte underground</span>
+        <h1 style="margin:0;font:800 74px/.92 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:-.02em;text-transform:uppercase;color:#fff">Donde el talento local encuentra voz.</h1>
+        <p style="margin:26px 0 34px;font:400 18px/1.55 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.6);max-width:440px">Deportes underground, historias reales, sin filtro.</p>
+        <div style="display:flex;gap:14px;align-items:center">
+          <a href="Off%20Radar%20-%20Ediciones.dc.html" style="padding:15px 26px;border-radius:999px;background:#E7569A;color:#1D1E1C;font:800 14px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em">Ver ediciones</a>
+          <a href="Off%20Radar%20-%20Historias.dc.html" style="padding:15px 26px;border-radius:999px;border:1px solid rgba(255,255,255,.25);color:#fff;font:700 14px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em">Reportajes</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NUESTRAS EDICIONES -->
+    <div style="padding:60px 50px 20px">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:30px">
+        <h2 style="margin:0;font:800 40px/1 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:-.01em;text-transform:uppercase;color:#fff">Nuestras ediciones</h2>
+        <a href="Off%20Radar%20-%20Ediciones.dc.html" style="font:700 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em">Ver todas →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px">
+        <!-- card 01 -->
+        <div style="border:1.5px solid #F1841B;border-radius:16px;overflow:hidden;background:#26251F">
+          <div style="aspect-ratio:4/3;position:relative"><image-slot id="or-ed01" shape="rect" placeholder="Boxeo"></image-slot></div>
+          <a href="Off%20Radar%20-%20Secciones.dc.html" style="text-decoration:none;display:block;padding:16px 18px 20px">
+            <div style="font:700 11px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.12em;color:#F1841B;margin-bottom:6px">ED. 01</div>
+            <div style="font:800 22px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff;margin-bottom:12px">Boxeo</div>
+            <span style="display:inline-block;font:800 10px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#1D1E1C;background:#F1841B;padding:5px 10px;border-radius:999px">Disponible</span>
+          </a>
+        </div>
+        <!-- card 02 -->
+        <div style="border:1.5px solid #E7569A;border-radius:16px;overflow:hidden;background:#26251F">
+          <div style="aspect-ratio:4/3;position:relative"><image-slot id="or-ed02" shape="rect" placeholder="Cheerleading"></image-slot></div>
+          <a href="Off%20Radar%20-%20Secciones.dc.html" style="text-decoration:none;display:block;padding:16px 18px 20px">
+            <div style="font:700 11px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.12em;color:#E7569A;margin-bottom:6px">ED. 02</div>
+            <div style="font:800 22px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff;margin-bottom:12px">Cheer</div>
+            <span style="display:inline-block;font:800 10px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#E7569A;border:1px solid rgba(231,86,154,.5);padding:4px 10px;border-radius:999px">Próximamente</span>
+          </a>
+        </div>
+        <!-- card 03 -->
+        <div style="border:1.5px solid #B9CE0B;border-radius:16px;overflow:hidden;background:#26251F">
+          <div style="aspect-ratio:4/3;position:relative"><image-slot id="or-ed03" shape="rect" placeholder="Triatlón"></image-slot></div>
+          <a href="Off%20Radar%20-%20Secciones.dc.html" style="text-decoration:none;display:block;padding:16px 18px 20px">
+            <div style="font:700 11px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.12em;color:#B9CE0B;margin-bottom:6px">ED. 03</div>
+            <div style="font:800 22px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff;margin-bottom:12px">Triatlón</div>
+            <span style="display:inline-block;font:800 10px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#B9CE0B;border:1px solid rgba(185,206,11,.5);padding:4px 10px;border-radius:999px">Próximamente</span>
+          </a>
+        </div>
+        <!-- card 04 -->
+        <div style="border:1.5px solid #584F9C;border-radius:16px;overflow:hidden;background:#26251F">
+          <div style="aspect-ratio:4/3;position:relative"><image-slot id="or-ed04" shape="rect" placeholder="Fútbol fem."></image-slot></div>
+          <a href="Off%20Radar%20-%20Secciones.dc.html" style="text-decoration:none;display:block;padding:16px 18px 20px">
+            <div style="font:700 11px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.12em;color:#584F9C;margin-bottom:6px">ED. 04</div>
+            <div style="font:800 22px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff;margin-bottom:12px">Fútbol fem.</div>
+            <span style="display:inline-block;font:800 10px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#584F9C;border:1px solid rgba(88,79,156,.5);padding:4px 10px;border-radius:999px">Próximamente</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPLORA POR DISCIPLINA -->
+    <div style="padding:56px 50px 0">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:24px">
+        <h2 style="margin:0;font:800 32px/1 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff">Explora por disciplina</h2>
+        <a href="#" style="font:700 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em">Todas las disciplinas →</a>
+      </div>
+      <div class="disc" style="display:grid;grid-template-columns:repeat(6,1fr);gap:14px">
+        <a href="#" style="padding:20px 16px;border-radius:14px;background:#26251F;border:1px solid rgba(241,132,27,.35);display:flex;flex-direction:column;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#F1841B"></span><span style="font:800 15px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff">Boxeo</span><span style="font:500 11px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.4)">12 historias</span></a>
+        <a href="#" style="padding:20px 16px;border-radius:14px;background:#26251F;border:1px solid rgba(231,86,154,.35);display:flex;flex-direction:column;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#E7569A"></span><span style="font:800 15px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff">Cheerleading</span><span style="font:500 11px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.4)">8 historias</span></a>
+        <a href="#" style="padding:20px 16px;border-radius:14px;background:#26251F;border:1px solid rgba(185,206,11,.35);display:flex;flex-direction:column;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#B9CE0B"></span><span style="font:800 15px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff">Triatlón</span><span style="font:500 11px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.4)">6 historias</span></a>
+        <a href="#" style="padding:20px 16px;border-radius:14px;background:#26251F;border:1px solid rgba(88,79,156,.35);display:flex;flex-direction:column;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#584F9C"></span><span style="font:800 15px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff">Fútbol fem.</span><span style="font:500 11px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.4)">9 historias</span></a>
+        <a href="#" style="padding:20px 16px;border-radius:14px;background:#26251F;border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#6F4495"></span><span style="font:800 15px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff">Skate</span><span style="font:500 11px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.4)">4 historias</span></a>
+        <a href="#" style="padding:20px 16px;border-radius:14px;background:#26251F;border:1px dashed rgba(255,255,255,.2);display:flex;flex-direction:column;gap:8px;align-items:flex-start;justify-content:center"><span style="font:800 15px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:rgba(255,255,255,.55)">+ Ver todas</span></a>
+      </div>
+    </div>
+
+    <!-- REPORTAJES DESTACADOS -->
+    <div style="padding:64px 50px 0">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:24px">
+        <div>
+          <span style="font:700 11px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#584F9C">Historias</span>
+          <h2 style="margin:6px 0 0;font:800 40px/1 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff">Reportajes destacados</h2>
+        </div>
+        <a href="#" style="font:700 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em">Todos los reportajes →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:22px">
+        <!-- big feature -->
+        <a href="#" style="position:relative;border-radius:18px;overflow:hidden;min-height:420px;display:flex;align-items:flex-end;border:1px solid rgba(255,255,255,.08)">
+          <div style="position:absolute;inset:0"><image-slot id="or-rep-main" shape="rect" placeholder="Reportaje principal"></image-slot></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,5,5,.92) 8%, rgba(5,5,5,.1) 60%);pointer-events:none"></div>
+          <div style="position:relative;padding:34px 36px">
+            <span style="display:inline-block;font:800 10px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#1D1E1C;background:#F1841B;padding:5px 11px;border-radius:999px;margin-bottom:16px">Boxeo</span>
+            <h3 style="margin:0;font:800 34px/1.02 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff;max-width:560px">Los gimnasios que sobreviven en las sombras de la ciudad</h3>
+            <p style="margin:12px 0 0;font:400 15px/1.5 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.6);max-width:520px">Un recorrido por los rings clandestinos donde se forjan los próximos campeones nacionales.</p>
+            <div style="margin-top:16px;font:600 12px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.45)">Reportaje · 8 min de lectura</div>
+          </div>
+        </a>
+        <!-- two stacked -->
+        <div style="display:flex;flex-direction:column;gap:22px">
+          <div style="display:grid;grid-template-columns:130px 1fr;gap:16px;background:#26251F;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;min-height:198px">
+            <div style="position:relative"><image-slot id="or-rep-a" shape="rect" placeholder="Foto"></image-slot></div>
+            <a href="#" style="padding:20px 18px 20px 0;display:flex;flex-direction:column;justify-content:center;text-decoration:none">
+              <span style="font:800 10px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#584F9C;margin-bottom:10px">Fútbol fem. · Entrevista</span>
+              <h3 style="margin:0;font:800 20px/1.1 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff">"Jugamos aunque nadie mire"</h3>
+              <span style="display:inline-block;margin-top:12px;font:800 10px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#584F9C;border:1px solid rgba(88,79,156,.5);padding:4px 10px;border-radius:999px">Próximamente</span>
+            </a>
+          </div>
+          <div style="display:grid;grid-template-columns:130px 1fr;gap:16px;background:#26251F;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;min-height:198px">
+            <div style="position:relative"><image-slot id="or-rep-b" shape="rect" placeholder="Foto"></image-slot></div>
+            <a href="#" style="padding:20px 18px 20px 0;display:flex;flex-direction:column;justify-content:center;text-decoration:none">
+              <span style="font:800 10px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#B9CE0B;margin-bottom:10px">Triatlón · Galería</span>
+              <h3 style="margin:0;font:800 20px/1.1 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff">Amanecer sobre el asfalto: 226K</h3>
+              <span style="display:inline-block;margin-top:12px;font:800 10px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#B9CE0B;border:1px solid rgba(185,206,11,.5);padding:4px 10px;border-radius:999px">Próximamente</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROXIMO EVENTO -->
+    <div style="padding:64px 50px 0">
+      <div style="display:grid;grid-template-columns:auto 1fr auto;gap:34px;align-items:center;padding:34px 40px;border-radius:18px;background:linear-gradient(90deg,#241019, #26251F 60%);border:1px solid rgba(231,86,154,.3)">
+        <div style="text-align:center;padding-right:34px;border-right:1px solid rgba(255,255,255,.12)">
+          <div style="font:800 56px/.85 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:#E7569A">14</div>
+          <div style="font:800 15px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.1em;color:#fff;margin-top:4px">AGO</div>
+          <div style="font:600 12px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.4);margin-top:2px">2026</div>
+        </div>
+        <div>
+          <span style="font:700 11px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#E7569A">Próximo evento · Calendario</span>
+          <h3 style="margin:8px 0 6px;font:800 30px/1 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff">Velada de boxeo amateur — Barrio Histórico</h3>
+          <p style="margin:0;font:500 14px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.55)">20:00 · Club Deportivo Estrella · Entrada liberada — cupos limitados</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="#" style="text-align:center;padding:13px 24px;border-radius:999px;background:#E7569A;color:#1D1E1C;font:800 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em">Reservar</a>
+          <a href="#" style="text-align:center;padding:13px 24px;border-radius:999px;border:1px solid rgba(255,255,255,.22);color:#fff;font:700 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em">Ver calendario</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESTACADOS: DEPORTISTA + CLUB -->
+    <div style="padding:64px 50px 0">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);background:#26251F;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden;min-height:300px">
+          <div style="position:relative"><image-slot id="or-athlete" shape="rect" placeholder="Deportista"></image-slot></div>
+          <div style="padding:30px 30px;display:flex;flex-direction:column;justify-content:center">
+            <span style="font:700 11px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#F1841B;margin-bottom:14px">Deportista destacada</span>
+            <h3 style="margin:0;font:800 30px/1 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff">Camila Reyes</h3>
+            <p style="margin:10px 0 18px;font:400 14px/1.5 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.55)">Boxeadora, 22 años. Invicta en la escena amateur de Antofagasta sur.</p>
+            <a href="#" style="align-self:flex-start;font:700 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em">Ver perfil →</a>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);background:#26251F;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden;min-height:300px">
+          <div style="position:relative"><image-slot id="or-club" shape="rect" placeholder="Club"></image-slot></div>
+          <div style="padding:30px 30px;display:flex;flex-direction:column;justify-content:center">
+            <span style="font:700 11px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#584F9C;margin-bottom:14px">Club destacado</span>
+            <h3 style="margin:0;font:800 30px/1 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff">Las Leonas FC</h3>
+            <p style="margin:10px 0 18px;font:400 14px/1.5 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.55)">Club de fútbol femenino fundado en 2019. 60 jugadoras, tres categorías.</p>
+            <a href="#" style="align-self:flex-start;font:700 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em">Ver club →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AUDIOVISUAL / GALERIAS -->
+    <div style="padding:64px 50px 0">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:24px">
+        <h2 style="margin:0;font:800 32px/1 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff">Audiovisual &amp; galerías</h2>
+        <a href="#" style="font:700 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em">Ver todo →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px">
+        <a href="#" style="position:relative;border-radius:16px;overflow:hidden;min-height:260px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.08)">
+          <div style="position:absolute;inset:0"><image-slot id="or-video" shape="rect" placeholder="Video destacado"></image-slot></div>
+          <div style="position:absolute;inset:0;background:rgba(5,5,5,.35);pointer-events:none"></div>
+          <span style="position:relative;width:62px;height:62px;border-radius:50%;background:#E7569A;display:flex;align-items:center;justify-content:center;color:#1D1E1C;font-size:22px">▶</span>
+          <span style="position:absolute;left:24px;bottom:22px;font:800 16px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#fff">Documental · Ring de barrio</span>
+        </a>
+        <a href="#" style="position:relative;border-radius:16px;overflow:hidden;min-height:260px;border:1px solid rgba(255,255,255,.08)"><image-slot id="or-gal1" shape="rect" placeholder="Galería"></image-slot></a>
+        <a href="#" style="position:relative;border-radius:16px;overflow:hidden;min-height:260px;border:1px solid rgba(255,255,255,.08)"><image-slot id="or-gal2" shape="rect" placeholder="Galería"></image-slot></a>
+      </div>
+    </div>
+
+    <!-- NEWSLETTER / SUSCRIPCION -->
+    <div style="padding:70px 50px 70px">
+      <div style="position:relative;overflow:hidden;border-radius:22px;padding:56px 50px;background:radial-gradient(120% 140% at 12% 20%, rgba(231,86,154,.9), #B23B78 55%, #6F4495)">
+        <div style="max-width:620px">
+          <span style="font:700 12px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(5,5,5,.65)">Suscripción</span>
+          <h2 style="margin:12px 0 14px;font:800 46px/.98 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;color:#1D1E1C">No te quedes fuera del radar</h2>
+          <p style="margin:0 0 28px;font:500 16px/1.5 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(10,10,10,.72)">Cada nueva edición, reportaje y evento directo a tu correo. Sin spam, solo deporte real.</p>
+          <div style="display:flex;gap:12px;max-width:520px">
+            <div style="flex:1;padding:15px 20px;border-radius:999px;background:rgba(10,10,10,.9);color:rgba(255,255,255,.5);font:500 15px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif">tu@correo.cl</div>
+            <a href="Off%20Radar%20-%20Suscripcion.dc.html" style="padding:15px 30px;border-radius:999px;background:#1D1E1C;color:#E7569A;font:800 14px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em">Suscribirme</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="border-top:1px solid rgba(255,255,255,.08);padding:52px 50px 40px;background:#161715">
+      <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:30px;margin-bottom:44px">
+        <div>
+          <div style="margin-bottom:16px"><img src="assets/logo-horizontal-white.png" alt="Off Radar" style="height:30px;width:auto;display:block"></div>
+          <p style="margin:0 0 18px;font:400 14px/1.6 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.45);max-width:280px">Deportes underground, historias reales, sin filtro. Talento local, sin algoritmo.</p>
+          <div style="font:600 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:#E7569A">@offradar.cl</div>
+        </div>
+        <div>
+          <div style="font:800 12px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#F1841B;margin-bottom:16px">Revista</div>
+          <div style="display:flex;flex-direction:column;gap:11px;font:500 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.7)"><a href="Off%20Radar%20-%20Secciones.dc.html">Ediciones</a><a href="Off%20Radar%20-%20Historias.dc.html">Reportajes</a><a href="Off%20Radar%20-%20Historias.dc.html">Entrevistas</a><a href="Off%20Radar%20-%20Historias.dc.html">Galerías</a><a href="Off%20Radar%20-%20Historias.dc.html">Contenido audiovisual</a></div>
+        </div>
+        <div>
+          <div style="font:800 12px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#E7569A;margin-bottom:16px">Comunidad</div>
+          <div style="display:flex;flex-direction:column;gap:11px;font:500 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.7)"><a href="Off%20Radar%20-%20Secciones.dc.html">Disciplinas</a><a href="Off%20Radar%20-%20Secciones.dc.html">Deportistas</a><a href="Off%20Radar%20-%20Secciones.dc.html">Clubes</a><a href="Off%20Radar%20-%20Secciones.dc.html">Eventos</a><a href="Off%20Radar%20-%20Calendario.dc.html">Calendario deportivo</a></div>
+        </div>
+        <div>
+          <div style="font:800 12px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#B9CE0B;margin-bottom:16px">Off Radar</div>
+          <div style="display:flex;flex-direction:column;gap:11px;font:500 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.7)"><a href="Off%20Radar%20-%20Nosotros.dc.html">Nosotros</a><a href="Off%20Radar%20-%20Contacto.dc.html">Contacto</a><a href="Off%20Radar%20-%20Envio-Informacion.dc.html">Envío de información</a></div>
+        </div>
+        <div>
+          <div style="font:800 12px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#584F9C;margin-bottom:16px">Participa</div>
+          <div style="display:flex;flex-direction:column;gap:11px;font:500 13px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.7)"><a href="Off%20Radar%20-%20Suscripcion.dc.html">Suscripción</a><a href="Off%20Radar%20-%20Envio-Informacion.dc.html">Envío de información</a></div>
+          <a href="Off%20Radar%20-%20Suscripcion.dc.html" style="display:inline-block;margin-top:16px;padding:11px 20px;border-radius:999px;background:#E7569A;color:#1D1E1C;font:800 12px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em">Suscríbete</a>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-top:22px;border-top:1px solid rgba(255,255,255,.07);font:500 12px 'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;color:rgba(255,255,255,.35)">
+        <span>© 2026 Off Radar · Todos los derechos reservados</span>
+        <span style="display:flex;gap:20px"><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">YouTube</a></span>
+      </div>
+    </footer>
+  </div>
+
+</section>
+
+</div>
+
+</x-dc>
+</body>
+</html>

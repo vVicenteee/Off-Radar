@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&display=swap" rel="stylesheet">
+<style>:host,.ornav{font-family:'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif}.ornav a{text-decoration:none}</style>
+</helmet>
+<header class="ornav" style="display:flex;align-items:center;justify-content:space-between;padding:20px 40px;border-bottom:1px solid rgba(255,255,255,.07);background:#1D1E1C">
+  <img src="assets/logo-horizontal-white.png" alt="Off Radar" style="height:24px;width:auto;display:block">
+  <nav style="display:flex;gap:4px;align-items:center;flex:1;justify-content:center">
+    <a href="Off%20Radar%20-%20Home.dc.html" style="{{ inicioStyle }}">Inicio</a>
+    <a href="Off%20Radar%20-%20Ediciones.dc.html" style="{{ edicionesStyle }}">Ediciones</a>
+    <a href="Off%20Radar%20-%20Secciones.dc.html" style="{{ explorarStyle }}">Explorar</a>
+    <a href="Off%20Radar%20-%20Historias.dc.html" style="{{ historiasStyle }}">Historias</a>
+    <a href="Off%20Radar%20-%20Nosotros.dc.html" style="{{ nosotrosStyle }}">Nosotros</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:16px">
+    <a href="Off%20Radar%20-%20Suscripcion.dc.html" style="padding:9px 17px;border-radius:999px;background:#E7569A;color:#1D1E1C;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.04em">Suscríbete</a>
+    <span style="font-weight:600;font-size:13px;color:rgba(255,255,255,.45)">@offradar.cl</span>
+  </div>
+</header>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;inicio&quot;,&quot;options&quot;:[&quot;inicio&quot;,&quot;ediciones&quot;,&quot;explorar&quot;,&quot;historias&quot;,&quot;nosotros&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const a = this.props.active || 'explorar';
+    const base = 'padding:8px 13px;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.05em;';
+    const on = base + 'border-radius:8px;background:rgba(231,86,154,.14);color:#E7569A;';
+    const off = base + 'color:#eee;';
+    const s = k => a === k ? on : off;
+    return {
+      inicioStyle: s('inicio'), edicionesStyle: s('ediciones'),
+      explorarStyle: s('explorar'), historiasStyle: s('historias'), nosotrosStyle: s('nosotros')
+    };
+  }
+}
+</script>
+</body>
+</html>

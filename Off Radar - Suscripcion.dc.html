@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suscríbete — Off Radar</title>
+<meta name="description" content="Off Radar — deportes underground, historias reales, sin filtro. Revista digital de talento local.">
+<link rel="icon" type="image/png" href="assets/logo-stacked-white.png">
+<meta property="og:title" content="Suscríbete — Off Radar">
+<meta property="og:description" content="Off Radar — deportes underground, historias reales, sin filtro. Revista digital de talento local.">
+<meta property="og:type" content="website">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail" data-bg-color="#1D1E1C">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#1D1E1C"/>
+    <rect x="360" y="280" width="480" height="90" rx="45" fill="#E7569A"/><text x="600" y="342" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="42" font-weight="800" fill="#1D1E1C" text-anchor="middle">tu@correo.cl</text><text x="600" y="560" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="52" font-weight="800" fill="#fff" text-anchor="middle">SUSCRIPCIÓN</text>
+  </svg>
+</template>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&display=swap" rel="stylesheet">
+<style>
+  html{background:#1D1E1C}
+  body{margin:0;background:#1D1E1C;font-family:'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Display','Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:#E7569A;text-decoration:none}
+  a:hover{color:#ef82b7}
+  ::selection{background:#E7569A;color:#1D1E1C}
+  .pg a{color:inherit}
+  .eyebrow{font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+  .card-title{margin:0;font-weight:800;text-transform:uppercase;color:#fff}
+  .badge{display:inline-block;font-weight:800;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+  .field{width:100%;box-sizing:border-box;padding:15px 18px;border-radius:12px;background:#201f1b;border:1px solid rgba(255,255,255,.14);color:#fff;font-family:inherit;font-weight:500;font-size:15px;outline:none}
+  .field::placeholder{color:rgba(255,255,255,.35)}
+  .field:focus{border-color:#E7569A}
+</style>
+<script>
+(function(){
+  if (window.top !== window.self) return; /* no escalar dentro del editor */
+  var DESIGN = 1440;
+  function pg(){ return document.querySelector('.pg'); }
+  function fit(){
+    var el = pg(); if(!el) return;
+    el.style.width = DESIGN + 'px';
+    el.style.transformOrigin = 'top left';
+    var vw = document.documentElement.clientWidth;
+    el.style.transform = 'scale(' + (vw / DESIGN) + ')';
+    document.body.style.height = el.getBoundingClientRect().height + 'px';
+  }
+  document.documentElement.style.overflowX = 'hidden';
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', fit);
+  var iv = setInterval(function(){ if(pg()){ fit(); } }, 250);
+  setTimeout(function(){ clearInterval(iv); }, 5000);
+  if (window.ResizeObserver){
+    var t = setInterval(function(){ var el = pg(); if(el){ new ResizeObserver(fit).observe(el); clearInterval(t); } }, 150);
+  }
+  document.addEventListener('DOMContentLoaded', fit);
+  fit();
+})();
+</script>
+</helmet>
+
+<div class="pg" style="display:flex;flex-direction:column;background:#1D1E1C;width:100%">
+  <dc-import name="OR-Nav" active="inicio" hint-size="100%,72px"></dc-import>
+  <section data-screen-label="Suscripción">
+    <div style="padding:56px 50px 50px">
+      <div style="position:relative;overflow:hidden;border-radius:22px;padding:52px 50px;background:radial-gradient(120% 140% at 12% 20%, #E7569A, #B23B78 55%, #6F4495)">
+        <div style="max-width:620px">
+          <span style="font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(29,30,28,.7)">Newsletter</span>
+          <h1 style="margin:12px 0 14px;font-weight:800;font-size:48px;line-height:.98;text-transform:uppercase;color:#1D1E1C">No te quedes fuera del radar</h1>
+          <p style="margin:0 0 26px;font-weight:500;font-size:16px;line-height:1.5;color:rgba(29,30,28,.75)">Cada nueva edición, reportaje y evento directo a tu correo. Sin spam, solo deporte real.</p>
+          <sc-if value="{{ newsSent }}" hint-placeholder-val="{{ false }}">
+            <div style="display:inline-flex;align-items:center;gap:12px;padding:16px 24px;border-radius:999px;background:#1D1E1C"><span style="color:#B9CE0B;font-size:18px">✓</span><span style="font-weight:700;font-size:15px;color:#fff">¡Listo! Revisa tu correo para confirmar.</span></div>
+          </sc-if>
+          <sc-if value="{{ newsForm }}" hint-placeholder-val="{{ true }}">
+            <div>
+              <div style="display:flex;gap:12px;max-width:520px">
+                <input class="field" type="email" placeholder="tu@correo.cl" value="{{ nEmail }}" onInput="{{ setNEmail }}" style="flex:1;background:rgba(29,30,28,.92);border-color:rgba(29,30,28,.5)">
+                <button onClick="{{ submitNews }}" style="padding:15px 30px;border:none;border-radius:999px;background:#1D1E1C;color:#E7569A;font-family:inherit;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.05em;cursor:pointer;white-space:nowrap">Suscribirme</button>
+              </div>
+              <sc-if value="{{ newsError }}" hint-placeholder-val="{{ false }}"><div style="color:#1D1E1C;font-weight:700;font-size:13px;margin-top:12px">Ingresa un email válido.</div></sc-if>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+    <div style="padding:6px 50px 60px">
+      <div style="text-align:center;margin-bottom:36px">
+        <span class="eyebrow" style="color:#E7569A">Próximamente</span>
+        <h2 style="margin:12px 0 10px;font-weight:800;font-size:40px;line-height:1;text-transform:uppercase;color:#fff">Hazte parte de Off Radar</h2>
+        <p style="margin:0 auto;max-width:560px;font-weight:400;font-size:16px;line-height:1.55;color:rgba(255,255,255,.6)">El periodismo deportivo independiente se sostiene con su comunidad. Estas membresías llegan pronto.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+        <div style="border:1.5px solid rgba(255,255,255,.14);border-radius:18px;background:#26251F;padding:32px 30px;display:flex;flex-direction:column">
+          <h3 class="card-title" style="font-size:22px">Radar</h3>
+          <div style="margin:14px 0 6px"><span style="font-weight:800;font-size:40px;color:#fff">Gratis</span></div>
+          <p style="margin:0 0 22px;font-weight:500;font-size:13px;color:rgba(255,255,255,.5)">El acceso de siempre</p>
+          <div style="display:flex;flex-direction:column;gap:12px;flex:1">
+            <span style="display:flex;gap:10px;font-weight:500;font-size:14px;color:rgba(255,255,255,.8)"><span style="color:#B9CE0B">✓</span> Todas las ediciones y reportajes</span>
+            <span style="display:flex;gap:10px;font-weight:500;font-size:14px;color:rgba(255,255,255,.8)"><span style="color:#B9CE0B">✓</span> Newsletter semanal</span>
+            <span style="display:flex;gap:10px;font-weight:500;font-size:14px;color:rgba(255,255,255,.8)"><span style="color:#B9CE0B">✓</span> Calendario deportivo</span>
+          </div>
+          <button style="margin-top:24px;padding:14px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:transparent;color:#fff;font-family:inherit;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.05em;cursor:pointer">Tu plan actual</button>
+        </div>
+        <div style="border:1.5px solid #E7569A;border-radius:18px;background:#26251F;padding:32px 30px;display:flex;flex-direction:column;position:relative;box-shadow:0 0 0 4px rgba(231,86,154,.12)">
+          <span class="badge" style="position:absolute;top:-11px;left:30px;color:#1D1E1C;background:#E7569A">Recomendado</span>
+          <h3 class="card-title" style="font-size:22px">Cómplice</h3>
+          <div style="margin:14px 0 6px"><span style="font-weight:800;font-size:40px;color:#fff">$4.990</span><span style="font-weight:600;font-size:14px;color:rgba(255,255,255,.5)"> /mes</span></div>
+          <p style="margin:0 0 22px;font-weight:500;font-size:13px;color:rgba(255,255,255,.5)">Apoya el periodismo local</p>
+          <div style="display:flex;flex-direction:column;gap:12px;flex:1">
+            <span style="display:flex;gap:10px;font-weight:500;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#E7569A">✓</span> Todo lo del plan Radar</span>
+            <span style="display:flex;gap:10px;font-weight:500;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#E7569A">✓</span> Ediciones impresas de colección</span>
+            <span style="display:flex;gap:10px;font-weight:500;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#E7569A">✓</span> Acceso anticipado a documentales</span>
+            <span style="display:flex;gap:10px;font-weight:500;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#E7569A">✓</span> Invitaciones a eventos Off Radar</span>
+          </div>
+          <button style="margin-top:24px;padding:14px;border:none;border-radius:999px;background:#E7569A;color:#1D1E1C;font-family:inherit;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.05em;cursor:pointer">Avísame cuando esté</button>
+        </div>
+        <div style="border:1.5px solid #584F9C;border-radius:18px;background:#26251F;padding:32px 30px;display:flex;flex-direction:column">
+          <h3 class="card-title" style="font-size:22px">Mecenas</h3>
+          <div style="margin:14px 0 6px"><span style="font-weight:800;font-size:40px;color:#fff">$12.990</span><span style="font-weight:600;font-size:14px;color:rgba(255,255,255,.5)"> /mes</span></div>
+          <p style="margin:0 0 22px;font-weight:500;font-size:13px;color:rgba(255,255,255,.5)">Para quienes mueven el radar</p>
+          <div style="display:flex;flex-direction:column;gap:12px;flex:1">
+            <span style="display:flex;gap:10px;font-weight:500;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#8f86cf">✓</span> Todo lo del plan Cómplice</span>
+            <span style="display:flex;gap:10px;font-weight:500;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#8f86cf">✓</span> Tu nombre en los créditos</span>
+            <span style="display:flex;gap:10px;font-weight:500;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#8f86cf">✓</span> Encuentros con el equipo editorial</span>
+          </div>
+          <button style="margin-top:24px;padding:14px;border:1px solid #584F9C;border-radius:999px;background:transparent;color:#fff;font-family:inherit;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.05em;cursor:pointer">Avísame cuando esté</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <dc-import name="OR-Footer" hint-size="100%,340px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { nEmail: '', nSent: false, nErr: false };
+  _validEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
+  renderVals() {
+    const s = this.state;
+    return {
+      newsSent: s.nSent, newsForm: !s.nSent, newsError: s.nErr, nEmail: s.nEmail,
+      setNEmail: e => this.setState({ nEmail: e.target.value }),
+      submitNews: () => {
+        if (!this._validEmail(s.nEmail)) { this.setState({ nErr: true }); return; }
+        this.setState({ nSent: true, nErr: false });
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>
